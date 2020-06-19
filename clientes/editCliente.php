@@ -18,6 +18,7 @@
                     numero = '$_POST[numero]',
                     numeroInterior = '$_POST[numeroInterior]',
                     colonia = '$_POST[colonia]',
+                    localidad = '$_POST[localidad]',
                     municipio = '$_POST[municipio]',
                     estado = '$_POST[estado]',
                     pais = '$_POST[pais]',

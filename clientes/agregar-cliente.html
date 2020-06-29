@@ -4,80 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar cliente</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
 
-    <form action="addCliente.php" method="post">
+    <div class="container mt-5">
 
-        <h3>Registrar cliente</h3>
+        <div class="card">
+            
+            <div class="card-header">
+                Agregar cliente
+            </div>
 
-        <label for="">Cliente:</label>
-        <input type="text" name="clienteNombre" required>
+            <div class="card-body">
+                
+                <form action="addCliente.php" method="post">
 
-        <br>
+                    <div class="form-row">
+                        <div class="form-group col-12">
+                            <label for="">Cliente:</label>
+                            <input class="form-control" type="text" name="clienteNombre" required>  
+                        </div>
+                    </div>
 
-        <label for="">RFC:</label>
-        <input type="text" name="rfc_cliente" required>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="">RFC:</label>
+                            <input class="form-control" type="text" name="rfc_cliente" required>
+                        </div>
 
-        <br>
+                        <div class="form-group col-md-6">
+                            <label for="">Calle:</label>
+                            <input class="form-control" type="text" name="calle" required>
+                        </div>
 
-        <label for="">Calle:</label>
-        <input type="text" name="calle" required>
+                        <div class="form-group col-md-6">
+                            <label for="">Número exterior:</label>
+                            <input class="form-control" type="text" name="numero">
+                        </div>
 
-        <br>
+                        <div class="form-group col-md-6">
+                            <label for="">Número interior:</label>
+                            <input class="form-control" type="text" name="numeroInterior">
+                        </div>
 
-        <label for="">Número exterior:</label>
-        <input type="text" name="numero">
+                        <div class="form-group col-md-6">
+                            <label for="">Colonia:</label>
+                            <input class="form-control" type="text" name="colonia" required>
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                            <label for="">Localidad:</label>
+                            <input class="form-control" type="text" name="localidad" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Municipio:</label>
+                            <input class="form-control" type="text" name="municipio" required>
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                            <label for="">Estado:</label>
+                            <input class="form-control" type="text" name="estado" required>
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                            <label for="">País:</label>
+                            <input class="form-control" type="text" name="pais" required>
+                        </div>
 
-        <br>
+                        <div class="form-group col-md-6">
+                            <label for="">Codigo Postal:</label>
+                            <input class="form-control" type="text" name="codigoPostal" required>
+                        </div>
 
-        <label for="">Número interior:</label>
-        <input type="text" name="numeroInterior">
+                        <div class="form-group col-md-6">
+                            <label for="">Correo Electronico:</label>
+                            <input class="form-control" type="email" name="email" required>
+                        </div>
 
-        <br>
+                        <div class="form-group col-md-6">
+                            <label for="">Telefono:</label>
+                            <input class="form-control" type="tel" name="telefono" required>
+                        </div>
 
-        <label for="">Colonia:</label>
-        <input type="text" name="colonia" required>
+                    </div>
 
-        <br>
+                    <div class="form-group text-right">
+                        <input class="btn btn-success btn-block" type="submit" value="Guardar">
+                    </div>
 
-        <label for="">Localidad:</label>
-        <input type="text" name="localidad" required>
+                </form>
+            </div>
+        </div>
+    </div>
 
-        <br>
-
-        <label for="">Municipio:</label>
-        <input type="text" name="municipio" required>
-
-        <br>
-
-        <label for="">Estado:</label>
-        <input type="text" name="estado" required>
-
-        <br>
-
-        <label for="">Pais:</label>
-        <input type="text" name="pais" required>
-
-        <br>
-
-        <label for="">Codigo Postal:</label>
-        <input type="text" name="codigoPostal" required>
-
-        <br>
-
-        <label for="">Correo Electronico:</label>
-        <input type="email" name="email" required>
-
-        <br>
-
-        <label for="">Telefono:</label>
-        <input type="tel" name="telefono" required>
-
-        <br>
-
-        <input type="submit" value="Registrar">
-    </form>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
 </body>
 </html>

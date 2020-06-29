@@ -27,48 +27,72 @@
     if ($consultaProductosBD->num_rows>=1) {
         echo 
             "
-                <div>
-                <p>Datos del producto</p>
+                <table class='table table-hover table-striped mt-3'>
+                    <thead class='thead-dark'>
+                        <tr>
+                            <th>ID Producto:</th>
+                            <th>Cantidad</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
             ";
 
         while ($filaProducto = $consultaProductosBD->fetch_array(MYSQLI_ASSOC)) {
             echo 
                 "
-                    <div class='row'>
-                    
-                        <div class='col-2'>                
-                            <label>ID Producto:</label>
-                            <input class='form-control' type='text' name='factura_id_producto' value=" . $filaProducto['id_producto'] ."  readonly>
-                        </div>
-                        <div class='col-2'>        
-                            <label>Cantidad:</label>
-                            <input class='form-control' type='number' name='cantidad' required>
-                        </div>
-                        <div class='col-2'>        
-                            <label>Descripción:</label>
-                            <input class='form-control' type='text' name='descripcion_producto' value=" . $filaProducto['descripcion'] . " readonly>
-                        </div>
-                        <div class='col-2'>
-                            <label>Precio:</label>
-                            <input class='form-control' type='text' name='precio_producto' value=" . $filaProducto['precio'] . " readonly>
-                        </div>
-                        <div class='col-4'>                    
-                            <button class='btn btn-success' id='agregar-producto'>Añadir</button>
-                        </div>
+                    <tbody>
+                        <tr>
 
-                    </div>
+                            <input type='hidden' name='linea' id='linea' value=" . $filaProducto['linea'] . ">
+                            <input type='hidden' name='marca' id='marca' value=" . $filaProducto['marca'] . ">
+                            <input type='hidden' namefabricante id='fabricante' value=" . $filaProducto['fabricante'] . ">
+                            <input type='hidden' name='impuestos' id='impuestos' value=" . $filaProducto['impuestos'] . ">
+                            <input type='hidden' name='unidad' id='unidad' value=" . $filaProducto['unidad'] . ">
+                            <input type='hidden' name='costo' id='costo' value=" . $filaProducto['costo'] . ">
+                            <input type='hidden' name='costo_dolares' id='costo_dolares' value=". $filaProducto['costo_dolares'] . ">
+                            <input type='hidden' name='precio_dolares' id='precio_dolares' value=" . $filaProducto['precio_dolares'] . ">
+                            <input type='hidden' name='cambio_peso_dolar' id='cambio_peso_dolar' value=". $filaProducto['cambio_peso_dolar'] . ">
+                            <input type='hidden' name='fecha_contratacion' id='fecha_contratacion' value=" . $filaProducto['fecha_contratacion'] . ">
+                            <input type='hidden' name='fecha_caducidad' id='fecha_caducidad' value=". $filaProducto['fecha_caducidad'] . ">
+                            
+                            <td>
+                                <input class='form-control-plaintext' type='text' id='id_producto' name='id_producto' value=" . $filaProducto['id_producto'] ."  readonly>
+                            </td>
+
+                            <td>
+                                <input class='form-control' type='number' id='cantidad' name='cantidad' value='1' required>
+                            </td>
+                            
+                            <td>
+                                <input class='form-control-plaintext' type='text' id='descripcion' name='descripcion' value=" . $filaProducto['descripcion'] . " readonly>
+                            </td>
+                            
+                            <td>
+                                <input class='form-control-plaintext' type='text' id='precio' name='precio' value=" . $filaProducto['precio'] . " readonly>
+                            </td>
+                            
+                            <td>
+                                <button class='btn btn-outline-success btn-block' id='btn-agregar-producto'>Añadir</button>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
                 ";
         }
 
         echo
-            "</div>";
+            "</table>";
     } else {
         echo 
             "
-                <div class='alert alert-success mt-2'>
+                <div class='alert alert-success mt-3'>
                     <center>No hemos encontrado ningún registro para: " . $buscar_producto . "</center>
                 </div>
             ";
     }
 
 ?>
+
+<script type="text/javascript" src="js/agregar-productos.js"></script>

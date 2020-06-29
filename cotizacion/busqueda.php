@@ -37,64 +37,63 @@
 
                         <div class='col-4'>
                             <div class='form-group row'>
-                                <label class='col-sm-2'>ID:</label>
+                                <label class='col-sm-2 font-weight-bold'>ID:</label>
                                 <div class='col-sm-10'>
-                                    <input readonly class='form-control-plaintext' type='text' name='factura_id_cliente' value=" . $fila['id_cliente'] . ">
+                                    <input readonly class='form-control-plaintext' type='text' name='id_cliente' value=" . $fila['id_cliente'] . ">
                                 </div>
                             </div>
                             
                         </div>
                         <div class='col-4'>
-                            <p>Cliente: " . $fila['clienteNombre'] . "</p>
+                            <p><strong>Cliente: </strong>" . $fila['clienteNombre'] . "</p>
                         </div>
                         <div class='col-4'>
-                            <p>RFC: " . $fila['rfc_cliente'] . "</p>
+                            <p><strong>RFC:</strong> " . $fila['rfc_cliente'] . "</p>
                         </div>
 
                     </div>
 
                     <div class='row'>
                         <div class='col-3'>
-                            <p>Calle: " . $fila['calle'] . "</p>
+                            <p><strong>Calle: </strong>" . $fila['calle'] . "</p>
                         </div>
                         <div class='col-3'>
-                            <p>Número: " . $fila['numero'] . "</p>
+                            <p><strong>Número: </strong>" . $fila['numero'] . "</p>
                         </div>
                         <div class='col-3'>
-                            <p>Número interior: " . $fila['numeroInterior'] . "</p>
+                            <p><strong>Número interior: </strong>" . $fila['numeroInterior'] . "</p>
                         </div>
                         <div class='col-3'>
-                            <p>Colonia: " . $fila['colonia'] . "</p>
+                            <p><strong>Colonia: </strong>" . $fila['colonia'] . "</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-3'>
-                            <p>Localidad: " . $fila['localidad'] . "</p>
+                            <p><strong>Localidad: </strong>" . $fila['localidad'] . "</p>
                         </div>
                         <div class='col-3'>
-                            <p>Municipio: " . $fila['municipio'] . "</p>
+                            <p><strong>Municipio: </strong>" . $fila['municipio'] . "</p>
                         </div>
                         <div class='col-3'>
-                            <p>Estado: " . $fila['estado'] . "</p>
+                            <p><strong>Estado: </strong>" . $fila['estado'] . "</p>
                         </div>
                         <div class='col-3'>
-                            <p>País: " . $fila['pais'] . "</p>
+                            <p><strong>País: </strong>" . $fila['pais'] . "</p>
                         </div>
                     </div>
 
                     <div class='row'>
                         <div class='col-4'>
-                            <p>Código Postal: " . $fila['codigoPostal'] . "</p>
+                            <p><strong>Código Postal: </strong>" . $fila['codigoPostal'] . "</p>
                         </div>
                         <div class='col-4'>
-                            <p>Correo electrónico: " . $fila['email'] . "</p>
+                            <p><strong>Correo electrónico: </strong>" . $fila['email'] . "</p>
                         </div>
                         <div class='col-4'>
-                            <p>Teléfono: " . $fila['telefono'] . "</p>
+                            <p><strong>Teléfono: </strong>" . $fila['telefono'] . "</p>
                         </div>
                     </div>
-
                 ";
         }
         echo "</div>";
